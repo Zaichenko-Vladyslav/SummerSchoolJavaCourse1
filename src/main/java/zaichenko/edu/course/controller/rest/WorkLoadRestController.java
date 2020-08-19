@@ -27,7 +27,7 @@ public class WorkLoadRestController {
         return "<h1>Hello, from Work Load Controller</h1>";
     }
 
-    @RequestMapping(value = "get/list",method = RequestMethod.GET)
+    @RequestMapping(value = "/get/list",method = RequestMethod.GET)
     List<WorkLoad> getWorkLoadList(){
         return workLoadService.getAll();
     }

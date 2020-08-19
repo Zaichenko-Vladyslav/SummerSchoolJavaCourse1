@@ -11,13 +11,13 @@
 
 <div>
     <fieldset>
-        <legend>Add teacher</legend>
-        <form name="teacher" action="" method="POST">
-            Name:<@spring.formInput "teacherForm.name" "" "text"/>
+        <legend>Add group</legend>
+        <form name="group" action="" method="POST">
+            Name:<@spring.formInput "groupForm.name" "" "text"/>
             <br>
-            Description:<@spring.formInput "teacherForm.description" "" "text"/>
+            Specialty:<@spring.formInput "groupForm.specialty" "" "text"/>
             <br>
-            Telephone:<@spring.formInput "teacherForm.telephone" "" "text"/>
+            Description:<@spring.formInput "groupForm.description" "" "text"/>
             <br>
             <input type="submit" value="Create"/>
         </form>

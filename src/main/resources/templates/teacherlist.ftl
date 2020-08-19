@@ -12,16 +12,20 @@
     <table class="table table-dark">
         <tr>
             <th>Name</th>
+            <th>Surname</th>
             <th>Description </th>
             <th>Telephone</th>
+            <th>Experience</th>
             <th>Update</th>
             <th>Delete</th>
         </tr>
         <#list list as item>
             <tr>
                 <td>${item.name}</td>
+                <td>${item.surname}</td>
                 <td>${item.description}</td>
                 <td>${item.telephone}</td>
+                <td>${item.experience}</td>
                 <td><a href="http://localhost:8080/web/teacher/update/${item.id}">
                         <input type="button" value="update" class="btn-primary"></a>
                 </td>

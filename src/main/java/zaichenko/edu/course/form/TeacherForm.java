@@ -9,23 +9,29 @@ package zaichenko.edu.course.form;/*
 public class TeacherForm {
     private String id;
     private String name;
+    private String surname;
     private String description;
     private String telephone;
+    private int experience;
 
     public TeacherForm() {
     }
 
-    public TeacherForm(String name, String description, String telephone) {
+    public TeacherForm(String name, String surname, String description, String telephone, int experience) {
         this.name = name;
+        this.surname = surname;
         this.description = description;
         this.telephone = telephone;
+        this.experience = experience;
     }
 
-    public TeacherForm(String id, String name, String description, String telephone) {
+    public TeacherForm(String id, String name, String surname, String description, String telephone, int experience) {
         this.id = id;
         this.name = name;
+        this.surname = surname;
         this.description = description;
         this.telephone = telephone;
+        this.experience = experience;
     }
 
     public String getId() {
@@ -44,6 +50,14 @@ public class TeacherForm {
         this.name = name;
     }
 
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -60,13 +74,23 @@ public class TeacherForm {
         this.telephone = telephone;
     }
 
+    public int getExperience() {
+        return experience;
+    }
+
+    public void setExperience(int experience) {
+        this.experience = experience;
+    }
+
     @Override
     public String toString() {
         return "TeacherForm{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
                 ", description='" + description + '\'' +
                 ", telephone='" + telephone + '\'' +
+                ", experience=" + experience +
                 '}';
     }
 }

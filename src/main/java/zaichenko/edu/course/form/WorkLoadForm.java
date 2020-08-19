@@ -1,20 +1,15 @@
-package zaichenko.edu.course.model;/*
+package zaichenko.edu.course.form;/*
  @author Vladyslav Zaichenko
- @since 09 сер 2020
+ @since 18 сер 2020
  @version 1.0.0 
  Copyright (c) Vladyslav Zaichenko 
  Description:
  */
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import zaichenko.edu.course.model.Group;
+import zaichenko.edu.course.model.Teacher;
 
-import java.time.LocalDateTime;
-import java.util.Objects;
-
-@Document
-public class WorkLoad {
-    @Id
+public class WorkLoadForm {
     private String id;
     private Group group;
     private Teacher teacher;
@@ -22,19 +17,12 @@ public class WorkLoad {
     private String typeOfClass;
     private int amountOfHours;
     private double payment;
-    private LocalDateTime createdAt;
-    private LocalDateTime updateAt;
 
-    public WorkLoad() {
+    public WorkLoadForm() {
     }
 
-    public WorkLoad(Group group, Teacher teacher, String subject) {
-        this.group = group;
-        this.teacher = teacher;
-        this.subject = subject;
-    }
 
-    public WorkLoad(Group group, Teacher teacher, String subject, String typeOfClass, int amountOfHours, double payment) {
+    public WorkLoadForm(Group group, Teacher teacher, String subject, String typeOfClass, int amountOfHours, double payment) {
         this.group = group;
         this.teacher = teacher;
         this.subject = subject;
@@ -43,7 +31,7 @@ public class WorkLoad {
         this.payment = payment;
     }
 
-    public WorkLoad(String id, Group group, Teacher teacher, String subject, String typeOfClass, int amountOfHours, double payment) {
+    public WorkLoadForm(String id, Group group, Teacher teacher, String subject, String typeOfClass, int amountOfHours, double payment) {
         this.id = id;
         this.group = group;
         this.teacher = teacher;
@@ -109,25 +97,9 @@ public class WorkLoad {
         this.payment = payment;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public LocalDateTime getUpdateAt() {
-        return updateAt;
-    }
-
-    public void setUpdateAt(LocalDateTime updateAt) {
-        this.updateAt = updateAt;
-    }
-
     @Override
     public String toString() {
-        return "WorkLoad{" +
+        return "WorkLoadForm{" +
                 "id='" + id + '\'' +
                 ", group=" + group +
                 ", teacher=" + teacher +
@@ -136,18 +108,5 @@ public class WorkLoad {
                 ", amountOfHours=" + amountOfHours +
                 ", payment=" + payment +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        WorkLoad workLoad = (WorkLoad) o;
-        return Objects.equals(id, workLoad.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 }

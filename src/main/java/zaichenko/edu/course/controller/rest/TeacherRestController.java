@@ -27,7 +27,7 @@ public class TeacherRestController {
         return "<h1>Hello, from Teacher Controller</h1>";
     }
 
-    @RequestMapping(value = "get/list",method = RequestMethod.GET)
+    @RequestMapping(value = "/get/list",method = RequestMethod.GET)
     List<Teacher> getTeacherList(){
         return teacherService.getAll();
     }

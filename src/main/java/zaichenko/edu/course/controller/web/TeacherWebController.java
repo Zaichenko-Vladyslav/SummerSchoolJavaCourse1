@@ -58,7 +58,7 @@ public class TeacherWebController {
         Teacher teacher = new Teacher();
         teacher.setName(teacherForm.getName());
         teacher.setDescription(teacherForm.getDescription());
-        teacher.setTelephone(teacherForm.getDescription());
+        teacher.setTelephone(teacherForm.getTelephone());
         teacherService.create(teacher);
 
         model.addAttribute("teachers",teacherService.getAll());
@@ -71,8 +71,10 @@ public class TeacherWebController {
         TeacherForm teacherForm = new TeacherForm(
              teacher.getId(),
              teacher.getName(),
+             teacher.getSurname(),
              teacher.getDescription(),
-             teacher.getTelephone()
+             teacher.getTelephone(),
+                teacher.getExperience()
         );
         model.addAttribute("teacherForm", teacherForm);
         return "updateTeacher";

@@ -8,6 +8,7 @@ package zaichenko.edu.course.service.group.impls;/*
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import zaichenko.edu.course.datastorage.DataFake;
 import zaichenko.edu.course.model.Group;
 import zaichenko.edu.course.model.Teacher;
 import zaichenko.edu.course.repository.GroupRepository;
@@ -23,6 +24,9 @@ public class GroupServiceImpl implements IGroupService {
 
     @Autowired
     GroupRepository groupRepository;
+
+    @Autowired
+    DataFake dataFake;
 
     @Override
     public Group create(Group group) {
@@ -52,6 +56,11 @@ public class GroupServiceImpl implements IGroupService {
     @Override
     public List<Group> getAll() {
         return groupRepository.findAll();
+    }
+
+    public void reloadDataBase()
+    {
+        dataFake.init();
     }
 }
 

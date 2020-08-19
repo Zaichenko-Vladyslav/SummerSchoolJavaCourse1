@@ -8,6 +8,7 @@ package zaichenko.edu.course.service.workLoad.impls;/*
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import zaichenko.edu.course.datastorage.DataFake;
 import zaichenko.edu.course.model.Teacher;
 import zaichenko.edu.course.model.WorkLoad;
 import zaichenko.edu.course.repository.WorkLoadRepository;
@@ -21,6 +22,9 @@ public class WorkLoadServiceImpl implements IWorkLoadService {
 
     @Autowired
     WorkLoadRepository workLoadRepository;
+
+    @Autowired
+    DataFake dataFake;
 
     @Override
     public WorkLoad create(WorkLoad workLoad) {
@@ -50,5 +54,10 @@ public class WorkLoadServiceImpl implements IWorkLoadService {
     @Override
     public List<WorkLoad> getAll() {
         return workLoadRepository.findAll();
+    }
+
+    public void reloadDataBase()
+    {
+        dataFake.init();
     }
 }
