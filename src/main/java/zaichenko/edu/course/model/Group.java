@@ -1,15 +1,10 @@
-package zaichenko.edu.course.model;/*
- @author Vladyslav Zaichenko
- @since 09 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
- Description:
- */
+package zaichenko.edu.course.model;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Group {
+
     private String id;
     private String name;
     private String specialty;
@@ -20,6 +15,7 @@ public class Group {
     private LocalDateTime updateAt;
 
     public Group() {
+
     }
 
     public Group(String name, String specialty, String department, String description, int amountOfStudents) {
@@ -30,7 +26,12 @@ public class Group {
         this.amountOfStudents = amountOfStudents;
     }
 
-    public Group(String id, String name, String specialty, String department, String description, int amountOfStudents) {
+    public Group(String id,
+                 String name,
+                 String specialty,
+                 String department,
+                 String description,
+                 int amountOfStudents) {
         this.id = id;
         this.name = name;
         this.specialty = specialty;
@@ -39,7 +40,14 @@ public class Group {
         this.amountOfStudents = amountOfStudents;
     }
 
-    public Group(String id, String name, String specialty, String department, String description, int amountOfStudents, LocalDateTime createdAt, LocalDateTime updateAt) {
+    public Group(String id,
+                 String name,
+                 String specialty,
+                 String department,
+                 String description,
+                 int amountOfStudents,
+                 LocalDateTime createdAt,
+                 LocalDateTime updateAt) {
         this.id = id;
         this.name = name;
         this.specialty = specialty;
@@ -116,7 +124,7 @@ public class Group {
 
     @Override
     public String toString() {
-        return "Group{" +
+        return "Group { " +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", specialty='" + specialty + '\'' +
@@ -125,7 +133,7 @@ public class Group {
                 ", amountOfStudents=" + amountOfStudents +
                 ", createdAt=" + createdAt +
                 ", updateAt=" + updateAt +
-                '}';
+                " }";
     }
 
     @Override

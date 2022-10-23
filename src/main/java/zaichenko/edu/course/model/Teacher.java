@@ -1,19 +1,13 @@
-package zaichenko.edu.course.model;/*
- @author Vladyslav Zaichenko
- @since 08 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
- Description:
- */
+package zaichenko.edu.course.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Document
 public class Teacher {
+
     @Id
     private String id;
     private String name;
@@ -25,6 +19,7 @@ public class Teacher {
     private LocalDateTime updateAt;
 
     public Teacher() {
+
     }
 
     public Teacher(String name, String surname, String description, String telephone, int experience) {
@@ -44,7 +39,14 @@ public class Teacher {
         this.experience = experience;
     }
 
-    public Teacher(String id, String name, String surname, String description, String telephone, int experience, LocalDateTime createdAt, LocalDateTime updateAt) {
+    public Teacher(String id,
+                   String name,
+                   String surname,
+                   String description,
+                   String telephone,
+                   int experience,
+                   LocalDateTime createdAt,
+                   LocalDateTime updateAt) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -121,7 +123,7 @@ public class Teacher {
 
     @Override
     public String toString() {
-        return "Teacher{" +
+        return "Teacher { " +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
@@ -130,7 +132,7 @@ public class Teacher {
                 ", experience=" + experience +
                 ", createdAt=" + createdAt +
                 ", updateAt=" + updateAt +
-                '}';
+                " }";
     }
 
     @Override

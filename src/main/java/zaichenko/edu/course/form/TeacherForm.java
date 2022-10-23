@@ -1,18 +1,14 @@
-package zaichenko.edu.course.form;/*
- @author Vladyslav Zaichenko
- @since 11 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
- Description:
- */
+package zaichenko.edu.course.form;
 
 public class TeacherForm {
+
     private String id;
     private String name;
     private String description;
     private String telephone;
 
     public TeacherForm() {
+
     }
 
     public TeacherForm(String name, String description, String telephone) {
@@ -62,11 +58,11 @@ public class TeacherForm {
 
     @Override
     public String toString() {
-        return "TeacherForm{" +
+        return "TeacherForm { " +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", telephone='" + telephone + '\'' +
-                '}';
+                " }";
     }
 }

@@ -1,15 +1,10 @@
-package zaichenko.edu.course.model;/*
- @author Vladyslav Zaichenko
- @since 09 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
- Description:
- */
+package zaichenko.edu.course.model;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class WorkLoad {
+public class Workload {
+
     private String id;
     private Group group;
     private Teacher teacher;
@@ -19,10 +14,11 @@ public class WorkLoad {
     private LocalDateTime createdAt;
     private LocalDateTime updateAt;
 
-    public WorkLoad() {
+    public Workload() {
+
     }
 
-    public WorkLoad(Group group, Teacher teacher, String subject, int amountOfHours, double payment) {
+    public Workload(Group group, Teacher teacher, String subject, int amountOfHours, double payment) {
         this.group = group;
         this.teacher = teacher;
         this.subject = subject;
@@ -30,7 +26,7 @@ public class WorkLoad {
         this.payment = payment;
     }
 
-    public WorkLoad(String id, Group group, Teacher teacher, String subject, int amountOfHours, double payment) {
+    public Workload(String id, Group group, Teacher teacher, String subject, int amountOfHours, double payment) {
         this.id = id;
         this.group = group;
         this.teacher = teacher;
@@ -105,7 +101,7 @@ public class WorkLoad {
 
     @Override
     public String toString() {
-        return "WorkLoad{" +
+        return "Workload { " +
                 "id='" + id + '\'' +
                 ", group=" + group +
                 ", teacher=" + teacher +
@@ -114,14 +110,14 @@ public class WorkLoad {
                 ", payment=" + payment +
                 ", createdAt=" + createdAt +
                 ", updateAt=" + updateAt +
-                '}';
+                " }";
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        WorkLoad workLoad = (WorkLoad) o;
+        Workload workLoad = (Workload) o;
         return Objects.equals(id, workLoad.id);
     }
 

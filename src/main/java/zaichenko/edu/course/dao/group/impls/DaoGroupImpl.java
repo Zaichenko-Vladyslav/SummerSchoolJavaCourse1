@@ -1,17 +1,11 @@
-package zaichenko.edu.course.dao.group.impls;/*
- @author Vladyslav Zaichenko
- @since 09 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
- Description:
- */
+package zaichenko.edu.course.dao.group.impls;
 
 import zaichenko.edu.course.dao.group.interfaces.IDaoGroup;
 import zaichenko.edu.course.model.Group;
-
 import java.util.List;
 
 public class DaoGroupImpl implements IDaoGroup {
+
     @Override
     public Group create(Group group) {
         return null;

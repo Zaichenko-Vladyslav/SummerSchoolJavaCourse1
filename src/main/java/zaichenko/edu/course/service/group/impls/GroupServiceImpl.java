@@ -1,20 +1,10 @@
-package zaichenko.edu.course.service.group.impls;/*
- @author Vladyslav Zaichenko
- @since 09 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
- Description:
- */
+package zaichenko.edu.course.service.group.impls;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import zaichenko.edu.course.model.Group;
-import zaichenko.edu.course.model.Teacher;
 import zaichenko.edu.course.repository.GroupRepository;
-import zaichenko.edu.course.repository.TeacherRepository;
 import zaichenko.edu.course.service.group.interfaces.IGroupService;
-import zaichenko.edu.course.service.teacher.interfaces.ITeacherService;
-
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -54,4 +44,3 @@ public class GroupServiceImpl implements IGroupService {
         return groupRepository.findAll();
     }
 }
-
